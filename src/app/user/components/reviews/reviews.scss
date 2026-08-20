@@ -1,0 +1,161 @@
+.reviews-section {
+  padding: 70px 8%;
+  background: #f7f8fb;
+}
+
+.review-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 50px;
+}
+
+.google-logo img {
+  width: 45px;
+}
+
+.rating-details h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.rating .stars {
+  color: #ffc107;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.score {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+}
+
+.count {
+  color: #777;
+  font-size: 16px;
+}
+
+.review-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.review-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.review-card {
+  width: 360px;
+  min-height: 320px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  transition: .4s;
+  cursor: pointer;
+}
+
+.review-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 18px;
+}
+
+.top h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.top p {
+  margin-top: 4px;
+  color: gray;
+}
+
+.review-card .stars {
+  color: #ffc107;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.message {
+  line-height: 1.8;
+  color: #555;
+  font-size: 16px;
+}
+
+.nav-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 22px;
+  background: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,.15);
+  cursor: pointer;
+  transition: .3s;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  background: #3f51b5;
+  color: white;
+}
+
+.left {
+  margin-right: 20px;
+}
+
+.right {
+  margin-left: 20px;
+}
+
+@media(max-width:1200px){
+
+  .review-container{
+      flex-wrap:wrap;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .review-card{
+      width:100%;
+  }
+
+  .review-header{
+      flex-direction:column;
+      text-align:center;
+  }
+
+}

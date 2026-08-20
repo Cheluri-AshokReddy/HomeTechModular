@@ -1,0 +1,417 @@
+<section id="contact-us" class="contact-section">
+
+  <!-- =========================
+       SECTION HEADING
+  ========================== -->
+
+  <div class="section-heading">
+
+    <span class="section-label">
+      GET IN TOUCH
+    </span>
+
+    <h2>Contact Us</h2>
+
+    <p>
+      Let's create your dream home together.
+    </p>
+
+    <div class="heading-line"></div>
+
+  </div>
+
+
+  <!-- =========================
+       CONTACT CONTENT
+  ========================== -->
+
+  <div class="contact-container">
+
+    <!-- =========================
+         CONTACT INFORMATION
+    ========================== -->
+
+    <div class="contact-info">
+
+      <h3>Get In Touch</h3>
+
+      <p class="info-description">
+        Have a project in mind? We'd love to hear from you.
+        Get in touch with our team to discuss your interior
+        requirements.
+      </p>
+
+
+      <!-- Location -->
+
+      <div class="info-item">
+
+        <div class="info-icon">
+          <span
+            nz-icon
+            nzType="environment">
+          </span>
+        </div>
+
+        <div class="info-content">
+
+          <h4>Our Location</h4>
+
+          <p>Bengaluru, Karnataka</p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Phone -->
+
+      <div class="info-item">
+
+        <div class="info-icon">
+          <span
+            nz-icon
+            nzType="phone">
+          </span>
+        </div>
+
+        <div class="info-content">
+
+          <h4>Phone</h4>
+
+          <p>99160-27283</p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Email -->
+
+      <div class="info-item">
+
+        <div class="info-icon">
+          <span
+            nz-icon
+            nzType="mail">
+          </span>
+        </div>
+
+        <div class="info-content">
+
+          <h4>Email</h4>
+
+          <p>hometechmodulars@gmail.com</p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Business Hours -->
+
+      <div class="info-item">
+
+        <div class="info-icon">
+          <span
+            nz-icon
+            nzType="clock-circle">
+          </span>
+        </div>
+
+        <div class="info-content">
+
+          <h4>Business Hours</h4>
+
+          <p>Monday – Saturday</p>
+          <p>9:00 AM – 7:00 PM</p>
+
+        </div>
+
+      </div>
+
+
+      <!-- WhatsApp -->
+
+      <button
+        nz-button
+        class="whatsapp-button"
+        type="button"
+        (click)="openWhatsApp()">
+
+        <span
+          nz-icon
+          nzType="whats-app">
+        </span>
+
+        Chat with us on WhatsApp
+
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         ENQUIRY FORM
+    ========================== -->
+
+    <div class="contact-form-container">
+
+      <h3>Send an Enquiry</h3>
+
+      <p class="form-description">
+        Fill in your details and we'll get back to you.
+      </p>
+
+
+      <form
+        nz-form
+        [formGroup]="contactForm"
+        (ngSubmit)="submitEnquiry()">
+
+
+        <!-- Name -->
+
+        <div class="form-group">
+
+          <label>
+            Name <span>*</span>
+          </label>
+
+          <input
+            nz-input
+            type="text"
+            formControlName="name"
+            placeholder="Enter your name">
+
+          <div
+            class="error-message"
+            *ngIf="
+              contactForm.get('name')?.touched &&
+              contactForm.get('name')?.invalid
+            ">
+
+            Please enter your name.
+
+          </div>
+
+        </div>
+
+
+        <!-- Phone -->
+
+        <div class="form-group">
+
+          <label>
+            Phone Number <span>*</span>
+          </label>
+
+          <input
+            nz-input
+            type="tel"
+            formControlName="phone"
+            placeholder="Enter your phone number">
+
+          <div
+            class="error-message"
+            *ngIf="
+              contactForm.get('phone')?.touched &&
+              contactForm.get('phone')?.invalid
+            ">
+
+            Please enter a valid 10-digit phone number.
+
+          </div>
+
+        </div>
+
+
+        <!-- Email -->
+
+        <div class="form-group">
+
+          <label>
+            Email
+          </label>
+
+          <input
+            nz-input
+            type="email"
+            formControlName="email"
+            placeholder="Enter your email">
+
+          <div
+            class="error-message"
+            *ngIf="
+              contactForm.get('email')?.touched &&
+              contactForm.get('email')?.invalid
+            ">
+
+            Please enter a valid email address.
+
+          </div>
+
+        </div>
+
+
+        <!-- Service -->
+
+        <div class="form-group">
+
+          <label>
+            Service Interested In <span>*</span>
+          </label>
+
+          <nz-select
+            nzPlaceHolder="Select a service"
+            formControlName="service"
+            nzSize="large"
+            class="full-width">
+
+            <nz-option
+              nzValue="Modular Kitchen"
+              nzLabel="Modular Kitchen">
+            </nz-option>
+
+            <nz-option
+              nzValue="Bedroom Interiors"
+              nzLabel="Bedroom Interiors">
+            </nz-option>
+
+            <nz-option
+              nzValue="Living Room Interiors"
+              nzLabel="Living Room Interiors">
+            </nz-option>
+
+            <nz-option
+              nzValue="Pooja Unit"
+              nzLabel="Pooja Unit">
+            </nz-option>
+
+            <nz-option
+              nzValue="Study & Workspace"
+              nzLabel="Study & Workspace">
+            </nz-option>
+
+            <nz-option
+              nzValue="Panelling"
+              nzLabel="Panelling">
+            </nz-option>
+
+            <nz-option
+              nzValue="False Ceiling"
+              nzLabel="False Ceiling">
+            </nz-option>
+
+            <nz-option
+              nzValue="Complete Home Interiors"
+              nzLabel="Complete Home Interiors">
+            </nz-option>
+
+            <nz-option
+              nzValue="Other"
+              nzLabel="Other">
+            </nz-option>
+
+          </nz-select>
+
+          <div
+            class="error-message"
+            *ngIf="
+              contactForm.get('service')?.touched &&
+              contactForm.get('service')?.invalid
+            ">
+
+            Please select a service.
+
+          </div>
+
+        </div>
+
+
+        <!-- Message -->
+
+        <div class="form-group">
+
+          <label>
+            Message <span>*</span>
+          </label>
+
+          <textarea
+            nz-input
+            formControlName="message"
+            placeholder="Tell us about your requirements..."
+            rows="4">
+          </textarea>
+
+          <div
+            class="error-message"
+            *ngIf="
+              contactForm.get('message')?.touched &&
+              contactForm.get('message')?.invalid
+            ">
+
+            Please enter your message.
+
+          </div>
+
+        </div>
+
+
+        <!-- Submit -->
+
+        <button
+          nz-button
+          nzType="primary"
+          nzSize="large"
+          class="submit-button"
+          type="submit">
+
+          <span
+            nz-icon
+            nzType="send">
+          </span>
+
+          Submit Enquiry
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       GOOGLE MAP
+  ========================== -->
+
+  <div class="map-container">
+
+    <div class="map-heading">
+
+      <span class="section-label">
+        FIND US
+      </span>
+
+      <h3>Our Location</h3>
+
+    </div>
+
+    <div class="map-wrapper">
+
+      <iframe
+        src="https://share.google/YLjCym8WCihiEwlfU"
+        width="100%"
+        height="400"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>

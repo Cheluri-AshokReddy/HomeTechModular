@@ -1,0 +1,137 @@
+<nz-layout>
+
+  <!-- ================= Top Contact Bar ================= -->
+
+  <nz-header class="top-header">
+
+    <div nz-row nzJustify="space-between" nzAlign="middle">
+
+      <div class="left-section">
+
+        <span>
+          <span nz-icon nzType="mail"></span>
+          hometechmodulars@gmail.com
+        </span>
+
+        <span class="divider"></span>
+
+        <span>
+          <span nz-icon nzType="phone"></span>
+          99160-27283
+        </span>
+
+      </div>
+
+      <div class="right-section">
+
+        <a href="#">
+          <span
+            nz-icon
+            nzType="whats-app"
+            nzTheme="outline">
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </nz-header>
+
+  <!-- ================= Main Navigation ================= -->
+
+  <nz-header class="main-header">
+
+    <div nz-row nzAlign="middle">
+
+      <!-- Logo -->
+
+      <div nz-col nzSpan="6">
+
+        <img
+          src="assets/Images/HeaderImages/HomeTechLogo.jpg"
+          alt="HomeTech Logo"
+          class="logo">
+
+      </div>
+
+      <!-- Menu -->
+
+      <div nz-col nzSpan="18">
+
+        <ul
+          nz-menu
+          nzMode="horizontal"
+          class="menu">
+
+          <li nz-menu-item>
+            <a href="#about-us">About Us</a>
+          </li>
+
+          <li nz-menu-item>
+            <a href="#gallery">Gallery</a>
+          </li>
+
+          <li nz-menu-item>
+            <a href="#services">Services</a>
+          </li>
+
+          <li nz-menu-item>
+            <a href="#blogs">Blogs</a>
+          </li>
+
+          <li nz-menu-item>
+            <a href="#contact">Contact Us</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nz-header>
+
+</nz-layout>
+
+<!-- ================= Hero Carousel ================= -->
+<nz-carousel
+  nzAutoPlay
+  [nzAutoPlaySpeed]="5000"
+  nzEffect="scrollx">
+
+  <div
+    nz-carousel-content
+    *ngFor="let slide of slides">
+
+    <div class="hero-slide">
+
+      <img
+        [src]="slide.image"
+        class="hero-image">
+
+      <!-- Overlay -->
+
+      <div class="overlay"></div>
+
+      <!-- Content -->
+
+      <div class="hero-content">
+
+        <h1>{{slide.title}}</h1>
+
+        <p>{{slide.subtitle}}</p>
+
+   <a
+  href="#gallery"
+  class="hero-btn">
+  {{slide.button}}
+</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nz-carousel>

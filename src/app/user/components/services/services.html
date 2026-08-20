@@ -1,0 +1,44 @@
+<section
+  id="services"
+  class="services-section">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Services
+    </h2>
+
+    <div class="services-grid">
+
+      @for(service of services; track service.title){
+
+      <nz-card
+        class="service-card"
+        [nzBordered]="true">
+
+        <img
+          [src]="service.icon"
+          [alt]="service.title"
+          class="service-icon">
+
+        <h3>
+
+          {{service.title}}
+
+        </h3>
+
+        <p>
+
+          {{service.description}}
+
+        </p>
+
+      </nz-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

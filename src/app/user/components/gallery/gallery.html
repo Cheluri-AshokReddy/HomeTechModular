@@ -1,0 +1,77 @@
+<section class="gallery-section" id="gallery">
+
+    <h2 class="title">
+        Gallery
+    </h2>
+
+    <!-- Category Menu -->
+
+    <div class="category-menu">
+
+        <button
+            *ngFor="let category of categories"
+            (click)="loadImages(category)"
+            [class.active]="selectedCategory===category">
+
+            {{category
+                .replace('BedRoom','Bedrooms')
+                .replace('LivingRoom','Living Room')
+                .replace('PoojaUnit','Pooja Unit')
+                .replace('StudyWorkspace','Study & Workspace')
+                .replace('Falseceiling','False Ceiling')
+            }}
+
+        </button>
+
+    </div>
+
+    <!-- Carousel -->
+
+    <nz-carousel
+        nzDots="false"
+        nzAutoPlay
+        [nzAutoPlaySpeed]="3500">
+
+        <!-- First Slide -->
+
+        <div nz-carousel-content>
+
+            <div class="image-row">
+
+                <div
+                    class="image-card"
+                    *ngFor="let image of images | slice:0:3">
+
+                    <img
+                        [src]="image"
+                        alt="Gallery">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Second Slide -->
+
+        <div nz-carousel-content>
+
+            <div class="image-row">
+
+                <div
+                    class="image-card"
+                    *ngFor="let image of images | slice:2:5">
+
+                    <img
+                        [src]="image"
+                        alt="Gallery">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nz-carousel>
+
+</section>
