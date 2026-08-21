@@ -4,32 +4,52 @@
 
   <nz-header class="top-header">
 
-    <div nz-row nzJustify="space-between" nzAlign="middle">
+    <div
+      nz-row
+      nzJustify="space-between"
+      nzAlign="middle">
+
+      <!-- Contact Details -->
 
       <div class="left-section">
 
-        <span>
-          <span nz-icon nzType="mail"></span>
+        <span class="email-contact">
+          <span
+            nz-icon
+            nzType="mail">
+          </span>
+
           hometechmodulars@gmail.com
         </span>
 
         <span class="divider"></span>
 
         <span>
-          <span nz-icon nzType="phone"></span>
+          <span
+            nz-icon
+            nzType="phone">
+          </span>
+
           99160-27283
         </span>
 
       </div>
 
+
+      <!-- WhatsApp -->
+
       <div class="right-section">
 
-        <a href="#">
+        <a
+          href="#"
+          aria-label="WhatsApp">
+
           <span
             nz-icon
             nzType="whats-app"
             nzTheme="outline">
           </span>
+
         </a>
 
       </div>
@@ -38,15 +58,23 @@
 
   </nz-header>
 
+
   <!-- ================= Main Navigation ================= -->
 
   <nz-header class="main-header">
 
-    <div nz-row nzAlign="middle">
+    <div
+      nz-row
+      nzAlign="middle"
+      class="main-header-row">
+
 
       <!-- Logo -->
 
-      <div nz-col nzSpan="6">
+      <div
+        nz-col
+        nzSpan="6"
+        class="logo-col">
 
         <img
           src="assets/Images/HeaderImages/HomeTechLogo.jpg"
@@ -55,9 +83,13 @@
 
       </div>
 
+
       <!-- Menu -->
 
-      <div nz-col nzSpan="18">
+      <div
+        nz-col
+        nzSpan="18"
+        class="menu-col">
 
         <ul
           nz-menu
@@ -65,23 +97,33 @@
           class="menu">
 
           <li nz-menu-item>
-            <a href="#about-us">About Us</a>
+            <a href="#about-us">
+              About Us
+            </a>
           </li>
 
           <li nz-menu-item>
-            <a href="#gallery">Gallery</a>
+            <a href="#gallery">
+              Gallery
+            </a>
           </li>
 
           <li nz-menu-item>
-            <a href="#services">Services</a>
+            <a href="#services">
+              Services
+            </a>
           </li>
 
           <li nz-menu-item>
-            <a href="#blogs">Blogs</a>
+            <a href="#blogs">
+              Blogs
+            </a>
           </li>
 
           <li nz-menu-item>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact-us">
+              Contact Us
+            </a>
           </li>
 
         </ul>
@@ -94,7 +136,9 @@
 
 </nz-layout>
 
+
 <!-- ================= Hero Carousel ================= -->
+
 <nz-carousel
   nzAutoPlay
   [nzAutoPlaySpeed]="5000"
@@ -106,27 +150,42 @@
 
     <div class="hero-slide">
 
+
+      <!-- Hero Image -->
+
       <img
         [src]="slide.image"
+        [alt]="slide.title"
         class="hero-image">
 
-      <!-- Overlay -->
+
+      <!-- Dark Overlay -->
 
       <div class="overlay"></div>
 
-      <!-- Content -->
+
+      <!-- Hero Content -->
 
       <div class="hero-content">
 
-        <h1>{{slide.title}}</h1>
+        <h1>
+          {{ slide.title }}
+        </h1>
 
-        <p>{{slide.subtitle}}</p>
+        <p>
+          {{ slide.subtitle }}
+        </p>
 
-   <a
-  href="#gallery"
-  class="hero-btn">
-  {{slide.button}}
-</a>
+
+        <!-- Hero Button -->
+
+        <a
+          href="#gallery"
+          class="hero-btn">
+
+          {{ slide.button }}
+
+        </a>
 
       </div>
 
